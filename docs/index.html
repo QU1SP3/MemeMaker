@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>browser-image-kit demo</title>
+    <script type="module" crossorigin src="/MemeMaker/assets/index-CqFcbdd1.js"></script>
+    <link rel="stylesheet" crossorigin href="/MemeMaker/assets/index-Ko_FzJXI.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="workspace">
+        <div class="toolbar" aria-label="Editor de imagen">
+          <label class="file-control">
+            <input id="file" type="file" accept="image/*" multiple />
+            <span>Adjuntar imagenes</span>
+          </label>
+
+          <label class="canvas-control">
+            <span>Lienzo</span>
+            <select id="canvas-preset"></select>
+          </label>
+
+          <button id="rotate" type="button">Rotar</button>
+          <button id="flip" type="button">Voltear</button>
+          <button id="lasso" type="button">Lazo</button>
+          <button id="text" type="button">Texto</button>
+          <button id="download" type="button">Descargar</button>
+        </div>
+
+        <div class="editor">
+          <aside class="layers-panel" aria-label="Capas de imagen">
+            <div class="layers-header">
+              <strong>Capas</strong>
+              <div class="layers-header-actions">
+                <button id="layer-up" class="icon-button" type="button" aria-label="Subir capa seleccionada" title="Subir capa seleccionada"></button>
+                <button id="layer-down" class="icon-button" type="button" aria-label="Bajar capa seleccionada" title="Bajar capa seleccionada"></button>
+                <button id="layer-delete" class="icon-button danger" type="button" aria-label="Eliminar capa seleccionada" title="Eliminar capa seleccionada"></button>
+                <span id="layer-count">0/10</span>
+              </div>
+            </div>
+            <div id="layers" class="layers-list"></div>
+          </aside>
+
+          <div id="preview" class="preview">
+            <canvas id="canvas" width="960" height="540" aria-label="Vista previa"></canvas>
+          </div>
+
+          <aside class="inspector-panel" aria-label="Inspector">
+            <div id="text-toolbar" class="text-toolbar" hidden aria-label="Texto seleccionado">
+              <div class="panel-header">
+                <strong>Texto</strong>
+              </div>
+              <div class="text-controls">
+                <textarea id="text-content" class="text-content" aria-label="Contenido del texto" rows="3"></textarea>
+                <div class="control-row">
+                  <select id="text-size" aria-label="Tamano del texto">
+                    <option value="24">24</option>
+                    <option value="32">32</option>
+                    <option value="48">48</option>
+                    <option value="56" selected>56</option>
+                    <option value="72">72</option>
+                    <option value="96">96</option>
+                    <option value="128">128</option>
+                    <option value="160">160</option>
+                  </select>
+                  <label class="color-control" aria-label="Color del texto">
+                    <input id="text-color" type="color" value="#ffffff" />
+                  </label>
+                </div>
+                <div class="control-row">
+                  <button id="text-uppercase" class="icon-button wide-icon-button" type="button" aria-label="Mayusculas" title="Mayusculas">AA</button>
+                  <button id="text-align-left" class="icon-button" type="button" aria-label="Alinear izquierda" title="Alinear izquierda">L</button>
+                  <button id="text-align-center" class="icon-button" type="button" aria-label="Centrar texto" title="Centrar texto">C</button>
+                  <button id="text-align-right" class="icon-button" type="button" aria-label="Alinear derecha" title="Alinear derecha">R</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="backgrounds-panel" aria-label="Fondos del lienzo">
+              <div class="panel-header">
+                <strong>Fondos</strong>
+              </div>
+              <div id="backgrounds" class="backgrounds-list"></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
