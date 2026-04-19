@@ -1,0 +1,35 @@
+{
+  "name": "browser-image-kit",
+  "version": "0.1.0",
+  "description": "TypeScript image manipulation library for modern browsers.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite --host localhost --port 5173",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "keywords": [
+    "image",
+    "canvas",
+    "browser",
+    "typescript",
+    "resize",
+    "crop"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vite": "^6.3.2"
+  }
+}
